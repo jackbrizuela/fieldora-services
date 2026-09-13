@@ -181,6 +181,10 @@ export default async function Home() {
             ))}
           </nav>
 
+          <div className="mt-3 flex justify-center">
+            <ThemeDots />
+          </div>
+
           <div className="mt-auto rounded-2xl border border-black/[0.06] bg-[#fafafa] p-4">
             <div className="flex items-center gap-2">
               <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-black/[0.05]">
@@ -283,17 +287,13 @@ export default async function Home() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-3">
-                <ThemeDots />
-
-                <Link
-                  href="/leads"
-                  className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#17191c] px-4 text-sm font-medium text-white shadow-sm transition hover:bg-black"
-                >
-                  <Plus size={16} />
-                  New lead
-                </Link>
-              </div>
+              <Link
+                href="/leads"
+                className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-[#17191c] px-4 text-sm font-medium text-white shadow-sm transition hover:bg-black"
+              >
+                <Plus size={16} />
+                New lead
+              </Link>
             </div>
 
             <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -329,7 +329,7 @@ export default async function Home() {
             </div>
 
             <div className="mt-4 grid gap-4 xl:grid-cols-[1.7fr_0.9fr]">
-              <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] md:p-6">
+              <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] md:p-6 lg:h-[420px] lg:overflow-y-auto">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-[0.14em] text-black/35">
@@ -407,7 +407,7 @@ export default async function Home() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] md:p-6">
+              <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] md:p-6 lg:h-[420px] lg:overflow-y-auto">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-[0.14em] text-black/35">
@@ -491,7 +491,7 @@ export default async function Home() {
             </div>
 
             <div className="mt-4 grid flex-1 gap-4 lg:grid-cols-[1.35fr_1fr]">
-              <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] md:p-6">
+              <div className="rounded-2xl border border-black/[0.06] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] md:p-6 lg:h-[300px] lg:overflow-y-auto">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-[0.14em] text-black/35">
@@ -554,7 +554,7 @@ export default async function Home() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-black/[0.06] bg-[#17191c] p-5 text-white shadow-sm md:p-6">
+              <div className="rounded-2xl border border-black/[0.06] bg-[#17191c] p-5 text-white shadow-sm md:p-6 lg:h-[300px] lg:overflow-y-auto">
                 <div className="flex items-center gap-2">
                   <MessageSquareText size={17} className="text-white/60" />
                   <p className="text-xs font-medium uppercase tracking-[0.14em] text-white/45">

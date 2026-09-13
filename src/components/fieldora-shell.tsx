@@ -99,13 +99,15 @@ export default function FieldoraShell({
 
   return (
     <div className="relative min-h-screen bg-[#f6f7f9] text-[#17191c] lg:flex lg:h-screen lg:overflow-hidden">
-      <div className="fixed right-3 top-3 z-[70] lg:right-5 lg:top-5">
-        <ThemeDots />
-      </div>
+
       <aside className="hidden w-[248px] shrink-0 border-r border-black/[0.06] bg-white px-4 py-5 lg:flex lg:flex-col">
         <Brand />
 
         <Navigation pathname={pathname} />
+
+        <div className="mt-3 flex justify-center">
+          <ThemeDots />
+        </div>
       </aside>
 
       <div className="min-w-0 flex-1 lg:h-screen lg:overflow-hidden">
