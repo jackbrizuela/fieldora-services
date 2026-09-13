@@ -147,12 +147,12 @@ export default async function Home() {
   });
 
   return (
-    <main className="relative min-h-screen bg-[#f6f7f9] text-[#17191c]">
+    <main className="relative min-h-screen bg-[#f6f7f9] text-[#17191c] lg:h-screen lg:overflow-hidden">
       <div className="fixed right-3 top-3 z-[70] lg:right-5 lg:top-5">
         <ThemeDots />
       </div>
-      <div className="flex min-h-screen">
-        <aside className="hidden w-[248px] shrink-0 border-r border-black/[0.06] bg-white px-4 py-5 lg:flex lg:flex-col">
+      <div className="flex min-h-screen lg:h-screen">
+        <aside className="hidden w-[248px] shrink-0 border-r border-black/[0.06] bg-white px-4 py-5 lg:flex lg:h-screen lg:flex-col">
           <div className="flex items-center gap-3 px-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#17191c] text-white">
               <Wrench size={17} strokeWidth={2} />
@@ -231,7 +231,7 @@ export default async function Home() {
           </div>
         </aside>
 
-        <section className="min-w-0 flex-1">
+        <section className="min-w-0 flex-1 lg:h-screen lg:overflow-y-auto">
           <header className="relative flex h-[64px] items-center border-b border-black/[0.06] bg-white px-5 lg:hidden">
             <details className="group relative mr-3">
               <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-xl border border-black/[0.07] text-black/55 transition hover:bg-black/[0.03] [&::-webkit-details-marker]:hidden">
