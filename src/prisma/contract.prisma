@@ -1,0 +1,122 @@
+// use prisma-8
+
+model Lead {
+  id          Int      @id @default(autoincrement())
+  leadCode    String   @unique
+  customerId  Int?
+  customer    Customer? @relation(fields: [customerId], references: [id])
+
+  name        String
+  email       String?
+  phone       String?
+  service     String
+  source      String   @default("Manual")
+  status      String   @default("New")
+
+  value       Int      @default(0)
+  address     String?
+  notes       String?
+  followUpAt  TimestamptzString?
+
+  quotes      Quote[]
+  booking     Booking?
+
+  createdAt   TimestamptzString @default(now())
+  updatedAt   temporal.updatedAtString()
+}
+
+
+model Customer {
+  id           Int      @id @default(autoincrement())
+  customerCode String   @unique
+  name         String
+  email        String?
+  phone        String?
+  leads        Lead[]
+  createdAt    TimestamptzString @default(now())
+  updatedAt    temporal.updatedAtString()
+}
+model Quote {
+  id          Int      @id @default(autoincrement())
+  quoteCode   String   @unique
+
+  leadId      Int
+  lead        Lead     @relation(fields: [leadId], references: [id])
+
+  amount      Int
+  status      String   @default("Sent")
+  sentAt      TimestamptzString @default(now())
+  notes       String?
+
+  createdAt   TimestamptzString @default(now())
+  updatedAt   temporal.updatedAtString()
+}
+
+model Booking {
+  id          Int      @id @default(autoincrement())
+  bookingCode String   @unique
+
+  leadId      Int      @unique
+  lead        Lead     @relation(fields: [leadId], references: [id])
+
+  scheduledAt TimestamptzString
+  address     String
+  status      String   @default("Scheduled")
+  notes       String?
+
+  job         Job?
+
+  createdAt   TimestamptzString @default(now())
+  updatedAt   temporal.updatedAtString()
+}
+
+model Job {
+  id          Int      @id @default(autoincrement())
+  jobCode     String   @unique
+
+  bookingId   Int      @unique
+  booking     Booking  @relation(fields: [bookingId], references: [id])
+
+  status      String   @default("In Progress")
+  startedAt   TimestamptzString @default(now())
+  completedAt TimestamptzString?
+  notes       String?
+
+  createdAt   TimestamptzString @default(now())
+  updatedAt   temporal.updatedAtString()
+}
+
+model Automation {
+  id             Int      @id @default(autoincrement())
+  automationCode String   @unique
+
+  name           String
+  triggerEvent   String
+  actionType     String
+  delayMinutes   Int      @default(0)
+  status         String   @default("Draft")
+
+  executions     AutomationExecution[]
+
+  createdAt      TimestamptzString @default(now())
+  updatedAt      temporal.updatedAtString()
+}
+
+model AutomationExecution {
+  id             Int      @id @default(autoincrement())
+  executionCode  String   @unique
+
+  automationId   Int
+  automation     Automation @relation(fields: [automationId], references: [id])
+
+  eventType      String
+  sourceType     String
+  sourceId       Int
+
+  status         String   @default("Scheduled")
+  scheduledFor   TimestamptzString
+  executedAt     TimestamptzString?
+
+  createdAt      TimestamptzString @default(now())
+  updatedAt      temporal.updatedAtString()
+}

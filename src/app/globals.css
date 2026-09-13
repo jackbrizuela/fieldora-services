@@ -1,0 +1,581 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f7f9;
+  --foreground: #17191c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+/* ==========================================================
+   FIELDORA THEMES
+   Day is the original design.
+   Night and Fun only change color — never layout.
+   ========================================================== */
+
+html {
+  color-scheme: light;
+}
+
+/* ---------- Night ---------- */
+
+html[data-theme="night"] {
+  color-scheme: dark;
+  --background: #24272c;
+  --foreground: #eef0f3;
+}
+
+html[data-theme="night"] body,
+html[data-theme="night"] [class~="bg-[#f6f7f9]"] {
+  background-color: #24272c !important;
+  color: #eef0f3 !important;
+}
+
+html[data-theme="night"] [class~="bg-white"] {
+  background-color: #2d3137 !important;
+}
+
+html[data-theme="night"] [class~="bg-[#fafafa]"] {
+  background-color: #33373e !important;
+}
+
+html[data-theme="night"] [class~="bg-[#17191c]"] {
+  background-color: #454a52 !important;
+}
+
+html[data-theme="night"] [class~="text-[#17191c]"],
+html[data-theme="night"] [class~="text-black"] {
+  color: #eef0f3 !important;
+}
+
+html[data-theme="night"] [class*="text-black/"] {
+  color: #aeb4bd !important;
+}
+
+html[data-theme="night"] [class*="border-black/"],
+html[data-theme="night"] [class*="ring-black/"] {
+  border-color: rgba(255, 255, 255, 0.09) !important;
+}
+
+html[data-theme="night"] input,
+html[data-theme="night"] select,
+html[data-theme="night"] textarea {
+  background-color: #34383f;
+  color: #eef0f3;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Fun ---------- */
+
+html[data-theme="fun"] {
+  color-scheme: light;
+  --background: #f5f3ff;
+  --foreground: #25233a;
+}
+
+html[data-theme="fun"] body,
+html[data-theme="fun"] [class~="bg-[#f6f7f9]"] {
+  background-color: #f5f3ff !important;
+  color: #25233a !important;
+}
+
+html[data-theme="fun"] [class~="bg-white"] {
+  background-color: #fffefe !important;
+}
+
+html[data-theme="fun"] [class~="bg-[#fafafa]"] {
+  background-color: #f0edff !important;
+}
+
+html[data-theme="fun"] [class~="bg-[#17191c]"] {
+  background-color: #6d5ee8 !important;
+}
+
+html[data-theme="fun"] [class~="text-[#17191c]"],
+html[data-theme="fun"] [class~="text-black"] {
+  color: #29263e !important;
+}
+
+html[data-theme="fun"] [class*="text-black/"] {
+  color: #69647e !important;
+}
+
+html[data-theme="fun"] [class*="border-black/"],
+html[data-theme="fun"] [class*="ring-black/"] {
+  border-color: rgba(109, 94, 232, 0.13) !important;
+}
+
+html[data-theme="fun"] input,
+html[data-theme="fun"] select,
+html[data-theme="fun"] textarea {
+  background-color: #fffefe;
+  color: #29263e;
+  border-color: rgba(109, 94, 232, 0.14);
+}
+/* ==========================================================
+   FIELDORA NIGHT V2
+   Deep charcoal, never pure black.
+   ========================================================== */
+
+html[data-theme="night"] {
+  color-scheme: dark;
+  --background: #181b20;
+  --foreground: #f1f3f5;
+}
+
+html[data-theme="night"] body,
+html[data-theme="night"] [class~="bg-[#f6f7f9]"] {
+  background-color: #181b20 !important;
+  color: #f1f3f5 !important;
+}
+
+html[data-theme="night"] [class~="bg-white"],
+html[data-theme="night"] [class~="bg-white/95"] {
+  background-color: #1e2228 !important;
+}
+
+html[data-theme="night"] [class~="bg-[#fafafa]"] {
+  background-color: #232830 !important;
+}
+
+html[data-theme="night"] [class~="bg-[#17191c]"] {
+  background-color: #343a43 !important;
+}
+
+html[data-theme="night"] [class~="text-[#17191c]"],
+html[data-theme="night"] [class~="text-black"] {
+  color: #f1f3f5 !important;
+}
+
+html[data-theme="night"] [class*="text-black/"] {
+  color: #9da6b2 !important;
+}
+
+html[data-theme="night"] [class*="border-black/"] {
+  border-color: #343b45 !important;
+}
+
+html[data-theme="night"] [class*="ring-black/"] {
+  --tw-ring-color: rgba(255, 255, 255, 0.09) !important;
+}
+
+html[data-theme="night"] input,
+html[data-theme="night"] select,
+html[data-theme="night"] textarea {
+  background-color: #242930 !important;
+  color: #f1f3f5 !important;
+  border-color: #39414b !important;
+}
+
+html[data-theme="night"] input::placeholder,
+html[data-theme="night"] textarea::placeholder {
+  color: #737d89 !important;
+  opacity: 1;
+}
+
+html[data-theme="night"] input:focus,
+html[data-theme="night"] select:focus,
+html[data-theme="night"] textarea:focus {
+  background-color: #272d35 !important;
+  border-color: #535d69 !important;
+  outline-color: #535d69 !important;
+}
+
+html[data-theme="night"] table,
+html[data-theme="night"] thead,
+html[data-theme="night"] tbody,
+html[data-theme="night"] tr,
+html[data-theme="night"] td,
+html[data-theme="night"] th {
+  border-color: #343b45 !important;
+}
+
+/* ==========================================================
+   FIELDORA NIGHT V3
+   Near-black premium night palette.
+   ========================================================== */
+
+html[data-theme="night"] {
+  color-scheme: dark;
+  --background: #0b0d10;
+  --foreground: #f2f4f7;
+}
+
+/* Main app background */
+html[data-theme="night"] body,
+html[data-theme="night"] [class~="bg-[#f6f7f9]"] {
+  background-color: #0b0d10 !important;
+  color: #f2f4f7 !important;
+}
+
+/* Sidebar, header, primary cards */
+html[data-theme="night"] [class~="bg-white"],
+html[data-theme="night"] [class~="bg-white/95"] {
+  background-color: #111419 !important;
+}
+
+/* Secondary surfaces */
+html[data-theme="night"] [class~="bg-[#fafafa]"] {
+  background-color: #15191f !important;
+}
+
+/* Search bars and light utility surfaces */
+html[data-theme="night"] [class~="bg-[#f8f8f8]"] {
+  background-color: #15191f !important;
+}
+
+/* Dark buttons / selected navigation */
+html[data-theme="night"] [class~="bg-[#17191c]"] {
+  background-color: #252b33 !important;
+}
+
+/* Primary text */
+html[data-theme="night"] [class~="text-[#17191c]"],
+html[data-theme="night"] [class~="text-black"] {
+  color: #f2f4f7 !important;
+}
+
+/* Muted text */
+html[data-theme="night"] [class*="text-black/"] {
+  color: #929aa5 !important;
+}
+
+/* Borders */
+html[data-theme="night"] [class*="border-black/"] {
+  border-color: #272c33 !important;
+}
+
+/* Rings */
+html[data-theme="night"] [class*="ring-black/"] {
+  --tw-ring-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Normal form fields */
+html[data-theme="night"] input,
+html[data-theme="night"] select,
+html[data-theme="night"] textarea {
+  background-color: #15191f !important;
+  color: #f2f4f7 !important;
+  border-color: #2b3139 !important;
+}
+
+/* Inputs designed to sit inside another surface stay transparent */
+html[data-theme="night"] input[class*="bg-transparent"] {
+  background-color: transparent !important;
+}
+
+/* Placeholders */
+html[data-theme="night"] input::placeholder,
+html[data-theme="night"] textarea::placeholder {
+  color: #707985 !important;
+  opacity: 1;
+}
+
+/* Focus */
+html[data-theme="night"] input:focus,
+html[data-theme="night"] select:focus,
+html[data-theme="night"] textarea:focus {
+  border-color: #454d58 !important;
+  outline-color: #454d58 !important;
+}
+
+/* Tables */
+html[data-theme="night"] table,
+html[data-theme="night"] thead,
+html[data-theme="night"] tbody,
+html[data-theme="night"] tr,
+html[data-theme="night"] td,
+html[data-theme="night"] th {
+  border-color: #242a31 !important;
+}
+
+/* Subtle hover surfaces */
+html[data-theme="night"] [class*="hover:bg-black/"]:hover {
+  background-color: #1b2026 !important;
+}
+/* ==========================================================
+   FIELDORA FUN V2
+   Candy pink accent + soft pink polka-dot background.
+   ========================================================== */
+
+html[data-theme="fun"] {
+  color-scheme: light;
+  --background: #fff6fa;
+  --foreground: #2d2430;
+}
+
+html[data-theme="fun"] body,
+html[data-theme="fun"] [class~="bg-[#f6f7f9]"] {
+  background-color: #fff6fa !important;
+  background-image:
+    radial-gradient(circle, rgba(255, 95, 162, 0.22) 4px, transparent 4.5px),
+    radial-gradient(circle, rgba(255, 95, 162, 0.16) 4px, transparent 4.5px);
+  background-size: 44px 44px;
+  background-position:
+    0 0,
+    22px 22px;
+  color: #2d2430 !important;
+}
+
+/* Main cards / panels */
+html[data-theme="fun"] [class~="bg-white"],
+html[data-theme="fun"] [class~="bg-white/95"] {
+  background-color: #fffafd !important;
+}
+
+/* Secondary surfaces */
+html[data-theme="fun"] [class~="bg-[#fafafa]"],
+html[data-theme="fun"] [class~="bg-[#f8f8f8]"] {
+  background-color: #fff0f6 !important;
+}
+
+/* Primary accent surfaces */
+html[data-theme="fun"] [class~="bg-[#17191c]"] {
+  background-color: #ff5fa2 !important;
+}
+
+/* Main text */
+html[data-theme="fun"] [class~="text-[#17191c]"],
+html[data-theme="fun"] [class~="text-black"] {
+  color: #2d2430 !important;
+}
+
+/* Muted text */
+html[data-theme="fun"] [class*="text-black/"] {
+  color: #786574 !important;
+}
+
+/* Borders */
+html[data-theme="fun"] [class*="border-black/"] {
+  border-color: rgba(255, 95, 162, 0.16) !important;
+}
+
+/* Rings */
+html[data-theme="fun"] [class*="ring-black/"] {
+  --tw-ring-color: rgba(255, 95, 162, 0.14) !important;
+}
+
+/* Inputs */
+html[data-theme="fun"] input,
+html[data-theme="fun"] select,
+html[data-theme="fun"] textarea {
+  background-color: #fffafd !important;
+  color: #2d2430 !important;
+  border-color: rgba(255, 95, 162, 0.18) !important;
+}
+
+html[data-theme="fun"] input[class*="bg-transparent"] {
+  background-color: transparent !important;
+}
+
+html[data-theme="fun"] input::placeholder,
+html[data-theme="fun"] textarea::placeholder {
+  color: #b694a6 !important;
+  opacity: 1;
+}
+
+/* Focus */
+html[data-theme="fun"] input:focus,
+html[data-theme="fun"] select:focus,
+html[data-theme="fun"] textarea:focus {
+  border-color: #ff86b9 !important;
+  outline-color: #ff86b9 !important;
+}
+
+/* Hover */
+html[data-theme="fun"] [class*="hover:bg-black/"]:hover {
+  background-color: #ffe7f1 !important;
+}
+
+/* Tables */
+html[data-theme="fun"] table,
+html[data-theme="fun"] thead,
+html[data-theme="fun"] tbody,
+html[data-theme="fun"] tr,
+html[data-theme="fun"] td,
+html[data-theme="fun"] th {
+  border-color: rgba(255, 95, 162, 0.13) !important;
+}
+/* FIELDORA FUN V4 — giant candy polka dots */
+html[data-theme="fun"] body,
+html[data-theme="fun"] [class~="bg-[#f6f7f9]"] {
+  background-color: #fff6fa !important;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255, 95, 162, 0.24) 0,
+      rgba(255, 95, 162, 0.24) 60px,
+      transparent 61px
+    ),
+    radial-gradient(
+      circle,
+      rgba(255, 95, 162, 0.16) 0,
+      rgba(255, 95, 162, 0.16) 60px,
+      transparent 61px
+    ) !important;
+
+  background-size:
+    320px 320px,
+    320px 320px !important;
+
+  background-position:
+    0 0,
+    160px 160px !important;
+}
+/* FIELDORA FUN V5 — softer candy pink */
+html[data-theme="fun"] [class~="bg-[#17191c]"] {
+  background-color: #ff8fbd !important;
+}
+
+html[data-theme="fun"] body,
+html[data-theme="fun"] [class~="bg-[#f6f7f9]"] {
+  background-color: #fff7fb !important;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255, 143, 189, 0.24) 0,
+      rgba(255, 143, 189, 0.24) 60px,
+      transparent 61px
+    ),
+    radial-gradient(
+      circle,
+      rgba(255, 184, 214, 0.22) 0,
+      rgba(255, 184, 214, 0.22) 60px,
+      transparent 61px
+    ) !important;
+
+  background-size:
+    320px 320px,
+    320px 320px !important;
+
+  background-position:
+    0 0,
+    160px 160px !important;
+}
+
+html[data-theme="fun"] [class~="bg-[#fafafa]"],
+html[data-theme="fun"] [class~="bg-[#f8f8f8]"] {
+  background-color: #fff1f7 !important;
+}
+
+html[data-theme="fun"] [class*="border-black/"] {
+  border-color: rgba(255, 143, 189, 0.18) !important;
+}
+/* FIELDORA NIGHT — restrained pipeline surfaces */
+
+html[data-theme="night"] .fieldora-pipeline-column {
+  background: #12161b !important;
+  border-color: #252b32 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="night"] .fieldora-pipeline-lead {
+  background: #181d23 !important;
+  border-color: #292f37 !important;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025) !important;
+}
+
+html[data-theme="night"] .fieldora-pipeline-lead:hover {
+  background: #1d232a !important;
+  border-color: #343b44 !important;
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+}
+
+html[data-theme="night"] .fieldora-pipeline-empty {
+  background: #101419 !important;
+  border-color: #30363e !important;
+}
+
+html[data-theme="night"] .fieldora-pipeline-column > div:first-child span:first-child {
+  background-color: #76818d !important;
+}
+/* FIELDORA NIGHT — softer text and icon contrast */
+
+html[data-theme="night"] {
+  --foreground: #c7cdd4;
+}
+
+/* Primary text */
+html[data-theme="night"] body,
+html[data-theme="night"] [class~="text-white"],
+html[data-theme="night"] [class~="text-[#17191c]"],
+html[data-theme="night"] [class~="text-black"] {
+  color: #c7cdd4 !important;
+}
+
+/* Strong headings stay clear without becoming white */
+html[data-theme="night"] h1,
+html[data-theme="night"] h2,
+html[data-theme="night"] h3,
+html[data-theme="night"] [class*="font-semibold"] {
+  color: #d0d5db !important;
+}
+
+/* Icons sit quieter than the typography */
+html[data-theme="night"] svg {
+  color: #929ba6 !important;
+}
+
+/* Secondary / muted copy */
+html[data-theme="night"] [class*="text-black/"] {
+  color: #858e99 !important;
+}
+
+/* Very muted labels */
+html[data-theme="night"] [class*="text-white/"] {
+  color: #68717c !important;
+}
+
+/* Inputs should also avoid bright-white text */
+html[data-theme="night"] input,
+html[data-theme="night"] select,
+html[data-theme="night"] textarea {
+  color: #c1c7ce !important;
+}
+/* FIELDORA NIGHT — softer utility icon tiles */
+html[data-theme="night"] .fieldora-icon-tile,
+html[data-theme="night"] [class*="bg-[#f3f4f5]"],
+html[data-theme="night"] [class*="bg-[#f4f5f6]"],
+html[data-theme="night"] [class*="bg-[#f5f5f5]"] {
+  background-color: #1b2026 !important;
+  border-color: #282e35 !important;
+  color: #87919c !important;
+}
+
+html[data-theme="night"] .fieldora-icon-tile svg,
+html[data-theme="night"] [class*="bg-[#f3f4f5]"] svg,
+html[data-theme="night"] [class*="bg-[#f4f5f6]"] svg,
+html[data-theme="night"] [class*="bg-[#f5f5f5]"] svg {
+  color: #87919c !important;
+}
