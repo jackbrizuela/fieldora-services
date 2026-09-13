@@ -181,7 +181,7 @@ export default async function Home() {
             ))}
           </nav>
 
-          <div className="mt-3 flex justify-center">
+          <div className="mt-3 flex px-3">
             <ThemeDots />
           </div>
 
@@ -272,16 +272,16 @@ export default async function Home() {
             </div>
           </header>
 
-          <div className="flex min-h-0 lg:min-h-screen w-full flex-col px-5 pt-7 pb-5 md:px-8 md:pt-9 md:pb-5">
+          <div className="flex min-h-0 lg:min-h-screen w-full flex-col px-5 pt-5 pb-5 md:px-8 md:pt-6 md:pb-5">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-sm text-black/40">{todayLabel}</p>
 
-                <h1 className="mt-1 text-[28px] font-semibold tracking-[-0.035em] sm:text-[32px]">
+                <h1 className="mt-0.5 text-[26px] font-semibold tracking-[-0.035em] sm:text-[28px]">
                   Good morning, Charlie.
                 </h1>
 
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-black/45">
+                <p className="mt-1 max-w-2xl text-sm leading-5 text-black/45">
                   Here&apos;s what&apos;s happening across your home service
                   business.
                 </p>
