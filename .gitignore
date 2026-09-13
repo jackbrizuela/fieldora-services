@@ -53,3 +53,6 @@ fieldora-demo-seed.mjs
 fix-demo-pipeline.mjs
 seed-error.txt
 apply-fieldora-shell.ps1
+
+# Local Netlify folder
+.netlify

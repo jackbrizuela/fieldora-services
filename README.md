@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fieldora Services
 
-## Getting Started
+Fieldora is a CRM and operations dashboard built for home service businesses.
 
-First, run the development server:
+It helps service teams manage leads, customers, quotes, bookings, jobs, automations, reporting, and imported spreadsheet data from one place.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Lead management
+- Customer records
+- Quote tracking
+- Booking management
+- Job tracking
+- Automation workflows
+- Reporting dashboard
+- MapForge spreadsheet import
+- Day, Night, and Fun UI themes
+- Responsive desktop, tablet, and mobile experience
+- Supabase-backed PostgreSQL data
+- Next.js App Router
+- Prisma ORM
+- Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo Purpose
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Fieldora was built as a portfolio and product demonstration project to show how Nuffdev approaches practical business software:
 
-## Learn More
+- simple workflows
+- clean interfaces
+- responsive design
+- real data relationships
+- automation-ready architecture
+- business-first problem solving
 
-To learn more about Next.js, take a look at the following resources:
+## Built By
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Nuffdev**  
+Built by **Jack Brizuela**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> Business solutions made to simplify work, not create more problems.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© Nuffdev
