@@ -105,7 +105,7 @@ export default function FieldoraShell({
 
         <Navigation pathname={pathname} />
 
-        <div className="mt-3 flex px-3">
+        <div className="mt-3 flex pl-[42px]">
           <ThemeDots />
         </div>
       </aside>
